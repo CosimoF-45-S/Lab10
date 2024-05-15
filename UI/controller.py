@@ -12,6 +12,7 @@ class Controller:
         self._year = 0
 
     def handleCalcola(self, e):
+        self._view._txt_result.controls.clear()
         self.readYear()
         try:
             year = int(self._year)
@@ -23,7 +24,7 @@ class Controller:
                 self._view._txt_result.controls.append(ft.Text("Stati e Confini:\n"))
                 for i in output[0]:
                     self._view._txt_result.controls.append(ft.Text(i))
-                self._view._txt_result.controls.append(ft.Text("Componenti connesse:\n"))
+                self._view._txt_result.controls.append(ft.Text("\nComponenti connesse: "))
                 self._view._txt_result.controls.append(ft.Text(f"{output[1]}"))
                 self._view.update_page()
                 end = time.time()

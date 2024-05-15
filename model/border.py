@@ -15,4 +15,4 @@ class Border:
     def __hash__(self):
         return hash((self.state1no, self.state2no))
     def __str__(self):
-        return f"{self.state1abb}, {self.state2abb}"
+        return f"{self.state1ab}, {self.state2ab}"
